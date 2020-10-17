@@ -1,0 +1,134 @@
+
+
+h1 {
+  margin: 0px;
+  padding:50px;
+  align-items: center;
+  color: #fff;
+  text-shadow: #000 0 0 .2em;
+  font-family: cursive sans-serif;
+  
+}
+nav {
+    text-align: center;
+    border-top: 3px solid  rgb(95, 15, 64); 
+    border-bottom: 3px solid  rgb(95, 15, 64); 
+    
+}
+
+
+.linha {
+    display: inline;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin: 0px;
+    
+    }
+    
+
+body {
+    background-color: rgb(216, 243, 220);
+    font-family:  sans-serif;
+       }
+
+.italic {
+    font-style: italic;
+ }  
+
+.apontamento {
+    font-weight: bold;
+}
+
+.fotos {
+    width: 500px;
+    margin: 20px;
+    padding: 20px;
+    background: -moz-linear-gradient(top, rgb(15, 76, 92) 0%, rgb(186, 50, 79) 66%, rgb(95, 15, 64) 100%);
+    background: -webkit-linear-gradient(top, rgb(15, 76, 92) 0%, rgb(186, 50, 79) 66%, rgb(95, 15, 64) 100%);
+    background: linear-gradient(to bottom, rgb(15, 76, 92) 0%, rgb(186, 50, 79) 66%, rgb(95, 15, 64) 100%);
+}
+
+section {
+    margin: 20px;
+    padding: 20px;
+}
+
+.floatDir {
+    float: right;
+}
+
+.floatEsq {
+    float: left
+}
+
+aside {
+    font-size: x-large;
+    float: right;
+    width: 100px;
+    padding-left: .5rem;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-left: 40px;
+    margin-top: 23px;
+    box-shadow: inset 5px 0 5px -5px rgb(95, 15, 64);
+    font-style: italic;
+    color: rgb(95, 15, 64);
+}
+
+#receptores {
+    clear: both;
+}
+
+article {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+table.wiktable {
+    border: 6px solid rgb(95, 15, 64);
+    background-color: #FFE3C6;
+    width: 500px;
+    text-align: center;
+  }
+table.wiktable td, table.wiktable th {
+  border: 1px solid rgb(95, 15, 64);
+  padding: 4px 4px;
+}
+table.wiktable tbody td {
+  font-size: 13px;
+}
+table.wiktable thead {
+  background: rgb(95, 15, 64);
+  background: -moz-linear-gradient(top, rgb(15, 76, 92) 0%, rgb(186, 50, 79) 66%, rgb(95, 15, 64) 100%);
+  background: -webkit-linear-gradient(top, rgb(15, 76, 92) 0%, rgb(186, 50, 79) 66%, rgb(95, 15, 64) 100%);
+  background: linear-gradient(to bottom, rgb(15, 76, 92) 0%, rgb(186, 50, 79) 66%, rgb(95, 15, 64) 100%);
+}
+table.wiktable thead th {
+  font-size: 17px;
+  font-weight: bold;
+  color: #F0F0F0;
+  text-align: center;
+  border-left: 2px solid rgb(95, 15, 64);
+}
+table.wiktable thead th:first-child {
+  border-left: none;
+}
+
+
+footer {
+  margin-left: 0;
+  margin-right: 0;
+  text-align: center;
+  justify-content: center;
+  padding: 5px;
+  background: -moz-linear-gradient(top, rgb(15, 76, 92) 0%, rgb(186, 50, 79) 66%, rgb(95, 15, 64) 100%);
+  background: -webkit-linear-gradient(top, rgb(15, 76, 92) 0%, rgb(186, 50, 79) 66%, rgb(95, 15, 64) 100%);
+  background: linear-gradient(to bottom, rgb(15, 76, 92) 0%, rgb(186, 50, 79) 66%, rgb(95, 15, 64) 100%);
+  color: white;
+}
+
+
+
+  
+
