@@ -1,8 +1,15 @@
 
+header {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+}
 
 h1 {
+  
+  
   margin: 0px;
-  padding:50px;
+  padding:30px;
   align-items: center;
   color: #fff;
   text-shadow: #000 0 0 .2em;
@@ -10,6 +17,8 @@ h1 {
   
 }
 nav {
+    
+    background-color: rgb(184, 102, 77);
     text-align: center;
     border-top: 3px solid  rgb(95, 15, 64); 
     border-bottom: 3px solid  rgb(95, 15, 64); 
@@ -27,6 +36,8 @@ nav {
     
 
 body {
+    position: relative;
+    top: 200px;
     background-color: rgb(216, 243, 220);
     font-family:  sans-serif;
        }
