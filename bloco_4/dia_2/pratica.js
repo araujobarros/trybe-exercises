@@ -1,4 +1,4 @@
-let numbers = [70, 8, 100, 2];
+let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 
 // 1 - Nesse primeiro exercício, percorra o array imprimindo todos os valores nele contidos com a função console.log();
 
@@ -55,3 +55,23 @@ if (qtdImpar === 0) {
 } else {
     console.log("Existem " + qtdImpar + " números ímpares")
 }
+
+// 7 - Utilizando for, descubra qual o menor valor contido no array e imprima-o;
+
+let menorValor = numbers[0];
+
+for (var i in numbers){
+    if (numbers[i] <= menorValor){
+        menorValor = numbers[i];
+    }
+}
+console.log("O menor valor é: " + menorValor);
+
+// 8 - Utilizando for, crie uma array que vá de 1 até 25 e imprima o resultado;
+
+let newNumbers = [];
+
+for(let i=1; i <= 25; i++){
+    newNumbers.push(i);
+}
+console.log(newNumbers);
