@@ -1,4 +1,4 @@
-let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+let numbers = [70, 8, 100, 2];
 
 // 1 - Nesse primeiro exercício, percorra o array imprimindo todos os valores nele contidos com a função console.log();
 
@@ -43,3 +43,15 @@ console.log("O maior valor é: " + maiorValor);
 
 // 6 - Descubra quantos valores ímpares existem no array e imprima o resultado. Caso não exista nenhum, imprima a mensagem: "nenhum valor ímpar encontrado";
 
+let qtdImpar = 0;
+for (var i in numbers){
+    if (numbers[i] % 2 !== 0){
+    qtdImpar = qtdImpar + 1;
+    }
+}
+
+if (qtdImpar === 0) {
+    console.log("nenhum valor ímpar encontrado");
+} else {
+    console.log("Existem " + qtdImpar + " números ímpares")
+}
