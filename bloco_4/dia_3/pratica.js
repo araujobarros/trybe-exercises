@@ -51,7 +51,9 @@ for(i=0; i<n; i=i+2){
     console.log(espaco + asterix);
 }
 
+console.log("")
 //5- Faça uma pirâmide com n asteriscos de base que seja vazia no meio. Assuma que o valor de n será sempre ímpar:
+console.log("")
 
 for(i=0; i<n; i=i+2){
     let espaco = "";
@@ -64,7 +66,31 @@ for(i=0; i<n; i=i+2){
             asterix = asterix + "*";
         }
     console.log(espaco + asterix);
-    } else {
-        console.log("teste")
+    } else if(i >= 2 && i<= (n-2)){
+        let espacoMeio = "";
+        for (j=1; j<= (i-1); j++){
+            espacoMeio = espacoMeio + " "
+        }
+    console.log(espaco + "*" + espacoMeio +"*");
+        
     }
+}
+
+console.log("");
+//6- Faça um programa que diz se um número definido numa variável é primo ou não.
+console.log("");
+
+let number = 20;
+let divisores = [];
+
+for (let i=1; i<=number; i++) {
+    if (number % i === 0) {
+        divisores.push(i);
+    }
+}
+console.log("Os divisores são: " + divisores)
+if (divisores.length === 2) {
+    console.log("É primo");
+}else {
+    console.log("Não é primo")
 }
