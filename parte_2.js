@@ -92,6 +92,25 @@ function finalIgual(word, ending){
 }
 console.log(finalIgual("Trybe", "be"));
 
+// 5 - Crie uma função que receba um array de inteiros e retorne o inteiro que mais se repete.
+
+let lista =  [2, 3, 3, 5, 3, 2, 3]
+let  maiorSoma = 0;
+  for (i in lista) {
+    let soma = 0;
+    for (j in lista){
+      if (lista[j] === lista[i]){
+        soma = soma + 1;
+      }
+    }
+    if (soma >= maiorSoma){
+      maiorSoma = soma;
+      maisRepetido = lista[i]; 
+    }     
+  }
+console.log(maiorSoma);
+console.log(maisRepetido);
+
   
 
 
