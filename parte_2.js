@@ -94,7 +94,7 @@ console.log(finalIgual("Trybe", "be"));
 
 // 5 - Crie uma função que receba um array de inteiros e retorne o inteiro que mais se repete.
 
-let lista =  [2, 3, 3, 5, 3, 2, 3]
+function qualRepeteMais(lista){
 let  maiorSoma = 0;
   for (i in lista) {
     let soma = 0;
@@ -108,8 +108,9 @@ let  maiorSoma = 0;
       maisRepetido = lista[i]; 
     }     
   }
-console.log(maiorSoma);
-console.log(maisRepetido);
+  return maisRepetido;
+}
+console.log(qualRepeteMais([2, 3, 2, 5, 8, 2, 3]));
 
   
 
