@@ -45,13 +45,15 @@ console.log(indiceDoMenorValor([2, 4, 6, 7, 10, 0, -3]))
 
 // 6 - Crie uma função que receba um número inteiro N e retorne o somatório de todos os números de 1 até N.
 
-let N = 7;
-let soma = 0;
+function somaAteh(N){
+  let soma = 0;
 
-for(let i =1; i<=N; i++){
-  soma=soma + i;
+  for(let i =1; i<=N; i++){
+    soma=soma + i;
+  }
+  return soma;
 }
-console.log(soma);
+ console.log(somaAteh(5));
 
 
 
@@ -71,5 +73,25 @@ function ehMaisLongo (nomes) {
   return nomeLongo;
 }
   console.log(ehMaisLongo(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']));
+
+  // 7 - Crie uma função que receba uma string word e outra string ending. Verifique se a string ending é o final da string word. Considere que a string ending sempre será menor que a string word.
+
+function finalIgual(word, ending){
+  let soma = 0;
+
+  for(let i= (ending.length-1); i>=0; i--){
+    if(ending[i] === word[(i+word.length-ending.length)]) {
+      soma=soma+1;
+    }
+  }
+  if (soma === ending.length) {
+    return true;
+  }else {
+    return false;
+  }  
+}
+console.log(finalIgual("Trybe", "be"));
+
+  
 
 
