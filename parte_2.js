@@ -43,6 +43,17 @@ function indiceDoMenorValor (lista){
 console.log(indiceDoMenorValor([2, 4, 6, 7, 10, 0, -3]))
 
 
+// 6 - Crie uma função que receba um número inteiro N e retorne o somatório de todos os números de 1 até N.
+
+let N = 7;
+let soma = 0;
+
+for(let i =1; i<=N; i++){
+  soma=soma + i;
+}
+console.log(soma);
+
+
 
 
 // 4 - Crie uma função que receba um array de nomes e retorne o nome com a maior quantidade de caracteres.
