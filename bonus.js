@@ -1,46 +1,70 @@
 // Faça um programa que receba uma string em algarismos romanos e retorne o número que a string representa.
 
-//Lista Input
-let listaRomana = ["C","M","X","I","V"];
-
 //Objeto de referência
 let romanosRef = {
-  um: {
+  I: {
     valor: 1,
     caracter:"I"
   },
-  cinco: {
+  V: {
     valor: 5,
     caracter:"V",
   },
-  dez: {
+  X: {
     valor: 10,
     caracter:"X",
   },
-  cinquenta: {
+  L: {
     valor: 50,
     caracter:"L",
   },
-  cem: {
+  C: {
     valor: 100,
     caracter:"C",
   },
-  quinhentos: {
+  D: {
     valor: 500,
     caracter:"D",
   },
-  mil: {
+  M: {
     valor: 1000,
     caracter:"M",
   },
 }
 
-//variável auxiliar:
-let soma
-//Comparando o input com o objeto
+
+//Lista Input - Aqui eu consegui comparar a lista imput com o objeto romanos e criar uma lista traduzida em inteiros
+let listaRomana = ["C","M","X","L","I","V"];
+let listaNumbers = [];
 for(i in listaRomana){
-  for(chave in romanosRef){
-    if()
+  for(chave in romanosRef)
+  if (listaRomana[i] === romanosRef[chave].caracter){
+    listaNumbers.push(romanosRef[chave].valor)
   }
 }
+console.log(listaNumbers);
+
+
+
+
+
+//Agora eu preciso somar da forma certa, Condicionar:
+var soma = 0
+for(let j = 0; j < listaNumbers.length; j++){
+  if (j < listaNumbers.length){
+    if (listaNumbers[j] < listaNumbers[(j+1)]){
+      soma = soma - listaNumbers[j];
+    } else{
+      soma = soma + listaNumbers[j];
+    }
+  }else {
+    soma = soma + listaNumbers[j]
+  }
+}
+
+console.log(soma);
+
+
+
+
 
