@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+</head>
+<body>
+  <div id="paiDoPai"> 
+    <h1>Teste</h1>
+    <div id="pai">
+      <div id="primeiroFilho"> <p>TprimeiroFilho</p></div>
+      <div id="elementoOndeVoceEsta">
+        <div id="primeiroFilhoDoFilho"></div>
+        <div id="segundoEUltimoFilhoDoFilho"></div>
+      </div>
+      Atenção!
+      <div id="terceiroFilho"></div>
+      <div id="quartoEUltimoFilho"></div>
+    </div>
+  </div>
+
+  <script>
+    //Acesse o elemento elementoOndeVoceEsta.
+    console.log(document.querySelector('#elementoOndeVoceEsta'));
+    //Acesse pai a partir de elementoOndeVoceEsta e adicione uma color a ele.
+    console.log(document.querySelector('#elementoOndeVoceEsta').parentNode);    
+    document.querySelector("#elementoOndeVoceEsta").parentNode.style.backgroundColor = 'green'
+    //Acesse o primeiroFilhoDoFilho e adicione um texto a ele. Você se lembra dos vídeos da aula anterior, como fazer isso?
+    document.querySelector('#primeiroFilhoDoFilho').innerText = 'Acesse o primeiroFilhoDoFilho e adicione um texto a ele. Você se lembra dos vídeos da aula anterior, como fazer isso?';
+    //Acesse o primeiroFilho a partir de pai.
+    console.log(document.querySelector('#pai').firstChild);
+    //Agora acesse o primeiroFilho a partir de elementoOndeVoceEsta.
+    console.log(document.querySelector('#elementoOndeVoceEsta').previousElementSibling);
+    //Agora acesse o texto Atenção! a partir de elementoOndeVoceEsta.
+    console.log(document.querySelector('#elementoOndeVoceEsta').nextSibling);
+    //Note que é diferente de: Agora acesse o terceiroFilho a partir de elementoOndeVoceEsta.
+    console.log(document.querySelector('#elementoOndeVoceEsta').nextElementSibling);
+    //Agora acesse o terceiroFilho a partir de pai.
+    console.log(document.querySelector('#pai').childNodes[5]);
+    //Preciso tirar uma dúvida nesta última questão, por que o child nodes retorna um text entre cada elemento?
+
+    //Parte II
+
+    // 1 - Crie um irmão para elementoOndeVoceEsta.
+
+    let pai = document.querySelector('#pai');
+
+    let novoirmao = document.createElement('div');
+    novoirmao.id = 'ultimofilhodeverdade';
+    console.log(novoirmao);
+
+    pai.appendChild(novoirmao);
+    console.log(document.querySelector('#pai'))
+    //Aqui o elemento irmão foi para a última posição, creio que se eu quisesse colocar em outra posição deveria usar algum outro tipo de createElement ou ter usado querySelectorAll()[X].
+
+    // - 2 Crie um filho para elementoOndeVoceEsta.
+    let elementoOndeVoceEsta = document.querySelector('#elementoOndeVoceEsta');
+
+    let terceiroFilhoDoFilho = document.createElement('div');
+    terceiroFilhoDoFilho.id = 'terceiroFilhoDoFilho';
+    //confirmando
+    console.log(terceiroFilhoDoFilho);
+
+    elementoOndeVoceEsta.appendChild(terceiroFilhoDoFilho);
+    //confirmando
+    console.log(document.querySelector('#elementoOndeVoceEsta'))
+
+    // - 3 Crie um filho para primeiroFilhoDoFilho.
+    let primeiroFilhoDoFilho = document.querySelector('#primeiroFilhoDoFilho');
+
+    let filhoDoFilhoDoFilho = document.createElement('div');
+    filhoDoFilhoDoFilho.id = 'filhoDoFilhoDoFilho';
+    //confirmando
+    console.log(filhoDoFilhoDoFilho);
+
+    primeiroFilhoDoFilho.appendChild(filhoDoFilhoDoFilho);
+    //confirmando
+    console.log(document.querySelector('#primeiroFilhoDoFilho'))
+
+    // 1 - A partir desse filho criado, acesse terceiroFilho.
+    console.log(document.querySelector('#filhoDoFilhoDoFilho').parentNode.nextElementSibling.nextElementSibling);
+    
+    //Parte III
+
+    //Remova todos os elementos da página, menos pai, elementoOndeVoceEsta e primeiroFilhoDoFilho.
+
+    
+    let filhosDoPai = document.querySelector('#pai').childNodes;
+    //Quando eu uso com childNodes aparece vários texts, o chidren fica mais bonito quando dá console.log.
+    console.log(filhosDoPai);
+    console.log(pai);
+
+    for(i = 0; i < filhosDoPai.length;i++){
+      filhosDoPai[i].className = 'filhosDoPai'
+    }
+
+    let filhosDoPaiclasses = document.querySelectorAll('.filhosDoPai');
+    console.log(filhosDoPaiclasses);
+
+    for (let i =0; i < filhosDoPaiclasses.length; i++){
+      let element = filhosDoPaiclasses[i];
+      if (element.id !== 'elementoOndeVoceEsta') {
+        pai.removeChild(element);
+      }
+    }
+
+    //Tentei usar o for diretamente no filhosDoPai(O querySelector usando childrem) e deu erro.
+
+    // for (let i = 0; i< filhosDoPai.length; i++) {
+    //   let element = filhosDoPai[i];
+    //   if(element.id !== 'elementoOndeVoceEsta') {
+    //     pai.removeChild(element);
+    //   }
+
+    // }
+
+    //  Testei um por um também
+    // filhosDoPai[0].remove();
+    // filhosDoPai[1].remove();
+    // filhosDoPai[2].remove();
+    // filhosDoPai[3].remove(); Dava erro aqui
+    // filhosDoPai[4].remove();
+   
+    //  pai.removeChild(filhosDoPai[0]);  
+    //  pai.removeChild(filhosDoPai[1]);
+    //  pai.removeChild(filhosDoPai[2]);
+    //  //pai.removeChild(filhosDoPai[3]); -->Esse aqui não funciona nem por resa
+
+    //Depois de tanto trabalho (umas 24h) fiquei com preguissa pra fazer pros outros, na verdade ficou faltando remover só os irmãos do primeiroFilhoDoFilho
+    
+
+     
+     
+   
+
+   
+
+
+   
+
+  </script>
+
+</body>
+</html>
