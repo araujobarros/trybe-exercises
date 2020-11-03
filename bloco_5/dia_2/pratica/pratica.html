@@ -56,6 +56,7 @@
     </style>
   </head>
   <body>
+     
     <script>
       // Adicione a tag h1 com o texto Exercício 5.2 - JavaScript DOM como filho da tag body;
 
@@ -102,9 +103,47 @@
     leftContent.className = 'left-content';
         
     mainContent.appendChild(leftContent);
+
+
+
       // Adicione a tag div com a classe right-content como filho da tag div criada no passo 2;
+
+      let rightContent = document.createElement('div');
+    rightContent.className = 'right-content';
+        
+    mainContent.appendChild(rightContent);
+    
       // Adicione uma imagem com src configurado para o valor https://picsum.photos/200 e classe small-image. Esse elemento deve ser filho do div criado no passo 5;
+
+      let smallImage = document.createElement('img');
+    smallImage.className = 'small-image';
+    smallImage.src = 'https://picsum.photos/200';
+        
+    leftContent.appendChild(smallImage);
+
+
       // Adicione uma lista não ordenada com os valores de 1 a 10 por extenso como valores da lista. Essa lista deve ser filha do div criado no passo 6;
+
+    let listNaoOrd = document.createElement('ul');
+    listNaoOrd.className = 'lista-nao-ordenada';
+        
+    rightContent.appendChild(listNaoOrd);
+
+    let listExt = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+
+    let listaNaoOrdenada = document.querySelector('.lista-nao-ordenada');
+
+    for (let i = 0; i < listExt.length; i++){
+      let numerosExt = listExt[i];
+
+      let numerosExtInLI = document.createElement('li');
+      numerosExtInLI.innerText = numerosExt;
+
+      listNaoOrd.appendChild(numerosExtInLI);
+    }
+
+
+
     </script>
   </body>
 </html>
