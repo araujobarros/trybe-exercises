@@ -17,23 +17,23 @@
  <button id="lib-button">Lib it!</button>
   
  <div id="story"></div>
+
+ <script>
+
+  let botao = document.querySelector('#lib-button');
+  let noun = document.querySelector('#noun')
+  let adjetivo = document.querySelector('#adjective')
+  let person = document.querySelector('#person')
+  let estoria = document.querySelector('#story')
   
+  
+  botao.addEventListener('click', makeMadLib);
+  
+  function makeMadLib() {
+    estoria.innerText = (person.value +" gosta de " + noun.value + " muito " + adjetivo.value)
+  }
+  
+  </script>
  </body>
 </html>
 
-<script>
-
-let botao = document.querySelector('#lib-button');
-let noun = document.querySelector('#noun')
-let adjetivo = document.querySelector('#adjective')
-let person = document.querySelector('#person')
-let estoria = document.querySelector('#story')
-
-
-botao.addEventListener('click', makeMadLib);
-
-function makeMadLib() {
-  estoria.innerText = (person.value +" gosta de " + noun.value + " muito " + adjetivo.value)
-}
-
-</script>
