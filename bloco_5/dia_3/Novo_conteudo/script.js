@@ -25,14 +25,16 @@ for (let i = 0; i < dezDaysList.length; i++){
   diasUl.appendChild(diasLi);
 
   if (dias === 24 || dias === 25 || dias === 31) {
-    diasLi.className = 'day holiday'
+    diasLi.classList.add('holiday');
   }
-  else if (dias === 4 || dias === 11 || dias === 18 || dias === 25)
-  diasLi.className = 'day friday'
+  if (dias === 4 || dias === 11 || dias === 18 || dias === 25){
+    diasLi.classList.add('friday');
+  }
 }
 
-let botaoConteiner = document.querySelector("body > div.buttons-container");
 
+
+let botaoConteiner = document.querySelector("body > div.buttons-container");
 let botao1 = document.createElement('button');
 botao1.innerHTML = 'Feriados';
 botao1.id = 'btn-holiday'
@@ -41,9 +43,7 @@ botaoConteiner.appendChild(botao1);
 
 
 let feriados = document.querySelectorAll('.holiday')
-
 console.log(feriados)
-
 function trocaCor (){
   for (i = 0; i< feriados.length; i++){
     if (feriados[i].style.backgroundColor === 'rgb(238, 238, 238)'){
@@ -53,5 +53,27 @@ function trocaCor (){
     }
   }
 }
-
 botao1.addEventListener('click', trocaCor);
+
+
+
+let botao2 = document.createElement('button');
+botao2.innerHTML = 'Sexta-feira';
+botao2.id = 'btn-friday'
+botaoConteiner.appendChild(botao2);
+
+
+let sextaFeiras = document.querySelectorAll('.friday')
+console.log(sextaFeiras)
+function trocaTexto (){
+  for (let i = 0; i < sextaFeiras.length; i++){    
+    if (sextaFeiras[i].innerText != (4 + 7*i) ){      
+      sextaFeiras[i].innerText = (4 + 7*i);
+    }else{
+      sextaFeiras[i].innerText = 'Sextou';
+    }
+  }
+}
+botao2.addEventListener('click', trocaTexto);
+
+
