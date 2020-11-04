@@ -31,3 +31,27 @@ for (let i = 0; i < dezDaysList.length; i++){
   diasLi.className = 'day friday'
 }
 
+let botaoConteiner = document.querySelector("body > div.buttons-container");
+
+let botao1 = document.createElement('button');
+botao1.innerHTML = 'Feriados';
+botao1.id = 'btn-holiday'
+botaoConteiner.appendChild(botao1);
+
+
+
+let feriados = document.querySelectorAll('.holiday')
+
+console.log(feriados)
+
+function trocaCor (){
+  for (i = 0; i< feriados.length; i++){
+    if (feriados[i].style.backgroundColor === 'rgb(238, 238, 238)'){
+      feriados[i].style.backgroundColor = 'blue';
+    }else{
+      feriados[i].style.backgroundColor = 'rgb(238, 238, 238)';
+    }
+  }
+}
+
+botao1.addEventListener('click', trocaCor);
