@@ -124,7 +124,7 @@ criaZoomOut();
 
 
 function criaTarefa (tarefa){
-  let minhasTarefas = document.querySelector("body > section > div.my-tasks")
+  let minhasTarefas = document.querySelector("div.my-tasks")
   let novaTarefa = document.createElement('span');
   minhasTarefas.appendChild(novaTarefa);
   novaTarefa.innerHTML = tarefa;
@@ -134,7 +134,7 @@ criaTarefa ("Estudar");
 
 
 function addCorTarefa(cor){
-  let minhasTarefas = document.querySelector("body > section > div.my-tasks");
+  let minhasTarefas = document.querySelector("div.my-tasks");
   let novaCor = document.createElement('div');
   minhasTarefas.appendChild(novaCor);
   novaCor.className = 'task';
@@ -143,3 +143,35 @@ function addCorTarefa(cor){
 
 addCorTarefa('blue');
   
+
+function taskamento(){
+  function taskano(){
+    let novaCor = document.querySelector("body > section > div.my-tasks > div")
+    if(novaCor.className === 'task'){
+      novaCor.className = 'task selected';
+    }else{
+      novaCor.className = 'task'
+    }
+  }
+  let novaCor = document.querySelector("body > section > div.my-tasks > div")
+  novaCor.addEventListener('click', taskano);
+}
+taskamento();
+
+
+
+function corDiaIn() {
+  let novaCor = document.querySelector("body > section > div.my-tasks > div")
+  let listaDias = document.querySelector("#days");
+  function mudaCor (event){
+    if (novaCor.className === 'task selected' && event.target.style.color !== novaCor.style.backgroundColor){
+      event.target.style.color = novaCor.style.backgroundColor;
+    }else{
+      event.target.style.color = 'rgb(119,119,119)';
+    }
+  }
+  listaDias.addEventListener('click', mudaCor);
+}
+corDiaIn();
+
+
