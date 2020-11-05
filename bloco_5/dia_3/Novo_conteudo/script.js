@@ -174,4 +174,52 @@ function corDiaIn() {
 }
 corDiaIn();
 
+function criaCompromisso() {
+  function recebeTexto (){
+    let compromissosUl = document.querySelector("body > section > div.task-list-container > ul")
+    let compromissosLi = document.createElement('li');
+    compromissosUl.appendChild(compromissosLi)
+    let caixaTexto = document.querySelector("#task-input");
+    if(caixaTexto.value === ""){
+      alert("Insira um texto válido na caixa \"Novo\"")
+    }
+    compromissosLi.innerHTML = caixaTexto.value
 
+  }
+  
+  let caixaTexto = document.querySelector("#task-input");
+  caixaTexto.addEventListener('change', recebeTexto);
+  
+}
+criaCompromisso();
+
+//Solução Gabarito
+// function addNewTask() {
+//   let getInputField = document.querySelector('#task-input');
+//   let addInputButton = document.querySelector('#btn-add');
+//   let getTaskList = document.querySelector('.task-list');
+
+//   addInputButton.addEventListener('click', function() {
+//     if (getInputField.value.length > 0) {
+//       let newLi = document.createElement('li');
+//       newLi.innerText = getInputField.value;
+
+//       getTaskList.appendChild(newLi);
+//       getInputField.value = '';
+//     } else {
+//       alert('Error: Digite ao menos 1 caractere.');
+//     }
+//   })
+
+//   getInputField.addEventListener('keyup', function(event) {
+//     if (event.keyCode === 13 && getInputField.value.length > 0) {
+//       let newLi = document.createElement('li');
+//       newLi.innerText = getInputField.value;
+
+//       getTaskList.appendChild(newLi);
+//       getInputField.value = '';
+//     }
+//   });
+// };
+
+// addNewTask();
