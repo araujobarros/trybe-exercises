@@ -193,7 +193,7 @@ function criaCompromisso() {
 }
 criaCompromisso();
 
-//Solução Gabarito
+// Solução Gabarito
 // function addNewTask() {
 //   let getInputField = document.querySelector('#task-input');
 //   let addInputButton = document.querySelector('#btn-add');
