@@ -42,7 +42,7 @@ function prevenirEvento (event) {
 }
 
 function ativarPrevencao () {
-  let botaoEnviar = document.querySelector("body > form > button")
+  let botaoEnviar = document.querySelector('#enviar')
   botaoEnviar.addEventListener('click', prevenirEvento);
 }
 let botaoResumo = document.querySelector("#resumo");
@@ -50,9 +50,10 @@ botaoResumo.addEventListener('click', ativarPrevencao )
 
 
 function desativarPrevencao () {
-  let botaoEnviar = document.querySelector("body > form > button")
+  let botaoEnviar = document.querySelector('#enviar')
   botaoEnviar.removeEventListener('click', prevenirEvento);
 }
 let botaoHabilitar = document.querySelector("#habilitar");
 botaoHabilitar.addEventListener('click', desativarPrevencao )
+
 

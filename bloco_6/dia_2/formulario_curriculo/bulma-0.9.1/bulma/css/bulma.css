@@ -4432,7 +4432,7 @@ fieldset[disabled] .select select:hover {
   clear: both;
   font-size: 1rem;
   position: relative;
-  text-align: inherit;
+  text-align: inherit;  
 }
 
 .control.has-icons-left .input:focus ~ .icon,
