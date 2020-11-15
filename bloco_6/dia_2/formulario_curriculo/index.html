@@ -51,8 +51,8 @@
         </div>
       </div>
       <div class="field">
-        <label class="label">Estado:</label>
         <div class="control">
+          <label class="label">Estado:</label>
           <div class="select">
             <select class="is-focused" name="estado" id="estado">              
             </select>
@@ -60,10 +60,12 @@
         </div>
       </div>
       <div class="field">
-        <label class="label">Moradia:</label>
         <div class="control">
-          <label class="radio" for="moradia1"><input name="moradia" id="moradia1" value="casa" type="radio" data-validate-field="radio">Casa</label>
-          <label class="radio" for="moradia2"><input name="moradia" id="moradia2" value="apt" type="radio" data-validate-field="radio">Apartamento</label>
+          <label class="label">Moradia:</label>
+          <input name="moradia" id="moradia1" class='radio' value="casa" type="radio" data-validate-field="radio">
+          <label class="label radio" for="moradia1">Casa</label>
+          <input name="moradia" id="moradia2" class='radio' value="apartamento" type="radio" data-validate-field="radio">
+          <label class="label radio" for="moradia2">Apartamento</label>
         </div>
       </div>
     </fieldset>
@@ -97,13 +99,19 @@
       </div>
     </fieldset>
     <div class="field">
-      <div class="control">
+      <div>
         <button id="enviar" class="button is-success" type="submit">Enviar</button>
         <button class="button" id="resumo">Resumo</button>
         <button class="button" id="habilitar">Habilitar "enviar"</button>
+        
       </div>
     </div>    
   </form>
+  <section>
+    <ul>
+      
+    </ul>
+  </section>
   
   <script src="node_modules/just-validate/dist/js/just-validate.min.js"></script>
   <script src="moment.js"></script>
