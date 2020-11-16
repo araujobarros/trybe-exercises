@@ -36,43 +36,41 @@ function criarCombobox () {
     opcao.setAttribute('value', (indiceEstados + 1));
   }
 }
-
 criarCombobox();
 
-
-// function prevenirEvento (event) {
-//   event.preventDefault();
-// }
-
-// function ativarPrevencao () {
-//   let botaoEnviar = document.querySelector('#enviar')
-//   botaoEnviar.addEventListener('click', prevenirEvento);
-// }
-// function eventoativar () {
-//   let botaoResumo = document.querySelector("#resumo");
-//   botaoResumo.addEventListener('click', ativarPrevencao);
-// }
-// eventoativar();
-
-// function desativarPrevencao () {
-//   let botaoEnviar = document.querySelector('#enviar')
-//   botaoEnviar.removeEventListener('click', prevenirEvento);
-// }
-
-// function eventoDesativar () {
-//   let botaoHabilitar = document.querySelector("#habilitar");
-//   botaoHabilitar.addEventListener('click', desativarPrevencao);
-// }
-// eventoDesativar ();
+function prevenirEvento (event) {
+  event.preventDefault();
+}
+function prevenirEnviar () {
+  let botaoEnviar = document.querySelector('#enviar')
+  botaoEnviar.addEventListener('click', prevenirEvento);
+}
+function aplicarPrevencao () {
+  let botaoResumo = document.querySelector("#resumo");
+  botaoResumo.addEventListener('click', prevenirEnviar);
+}
+aplicarPrevencao();
+function habilitarEnviar () {
+  let botaoEnviar = document.querySelector('#enviar')
+  botaoEnviar.removeEventListener('click', prevenirEvento);
+}
+function desativarPrevencao () {
+  let botaoHabilitar = document.querySelector("#habilitar");
+  botaoHabilitar.addEventListener('click', habilitarEnviar);
+}
+desativarPrevencao ();
 
 
 let botaoResumo = document.querySelector('#resumo')
   botaoResumo.addEventListener('click', function (){
     let teste = document.querySelectorAll(".control")
-   
     for (let indexControl = 0; indexControl < teste.length; indexControl++){
       if (teste[indexControl] !== undefined) {
         var campos = teste[indexControl].firstElementChild.innerText;
+        let elementCampo = document.createElement('p');
+        elementCampo.innerText = campos;
+        let recipienteCampo = document.querySelector("body > section:nth-child(6)");
+        recipienteCampo.appendChild(elementCampo);
         console.log(campos);
         let filhos = teste[indexControl].children
         for (let filhosIndex = 0; filhosIndex < filhos.length; filhosIndex++){
@@ -89,9 +87,20 @@ let botaoResumo = document.querySelector('#resumo')
             }
           }
         }
+        let elementinformacao = document.createElement('p');
+        elementinformacao.innerText = informacao;
+        let recipienteInformacao = document.querySelector("body > section:nth-child(6)");
+        recipienteInformacao.appendChild(elementinformacao);
         console.log(informacao);
       }
     }
   });
+
+
+  let botaoLimpar = document.querySelector("#reset");
+  botaoLimpar.addEventListener('click', function () {
+    let resumo = document.querySelector("body > section:nth-child(6)");
+    resumo.parentElement.removeChild(resumo);
+  })
 
  
