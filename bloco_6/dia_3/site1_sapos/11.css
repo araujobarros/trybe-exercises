@@ -1,0 +1,10 @@
+/* FLEXBOX FROGGY
+Ajude as rãs a encontrar seus nenúfares usando flex-directione justify-content.
+
+Observe que quando a direção flexível é uma coluna, justify-contentmuda para vertical e align-itemshorizontal. */
+
+#pond {
+  display: flex;
+flex-direction: column;
+justify-content: flex-end;
+}
