@@ -1,0 +1,14 @@
+/* Flexbox Defense
+ Wave 7 of 12  
+Use flex-direction ▾ to move your towers into position. */
+
+.tower-group-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  }
+  .tower-group-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  }

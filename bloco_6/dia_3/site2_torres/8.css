@@ -1,0 +1,13 @@
+/* Use flex-direction ▾ and either justify-content ▾ or align-items ▾ to move your towers into position. */
+
+.tower-group-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  }
+  .tower-group-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  }

@@ -1,0 +1,9 @@
+/* Flexbox Defense
+ Wave 6 of 12  
+Use justify-content ▾ and align-items ▾ to move your towers into position. */
+
+.tower-group-1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  }
