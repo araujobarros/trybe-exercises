@@ -1,0 +1,11 @@
+/* FLEXBOX FROGGY
+As duas propriedades flex-directione flex-wrapsão utilizadas tantas vezes juntos que a propriedade estenográfica flex-flowfoi criado para combiná-los. Esta propriedade abreviada aceita o valor de uma das duas propriedades separadas por um espaço.
+
+Por exemplo, você pode usar flex-flow: row wrappara definir linhas e agrupá-las.
+
+Tente flex-flowrepetir o nível anterior. */
+
+#pond {
+  display: flex;
+flex-flow: column wrap
+}

@@ -1,0 +1,16 @@
+/* FLEXBOX FROGGY
+As rãs estão espalhadas por todo o tanque, mas os nenúfares estão agrupados no topo. Você pode usar align-contentpara definir como várias linhas são espaçadas umas das outras. Esta propriedade assume os seguintes valores:
+
+flex-start: As linhas são embaladas na parte superior do contêiner.
+flex-end: As linhas são embaladas no fundo do contêiner.
+center: As linhas são embaladas no centro vertical do contêiner.
+space-between: As linhas são exibidas com espaçamento igual entre elas.
+space-around: As linhas são exibidas com espaçamento igual ao redor delas.
+stretch: As linhas são esticadas para caber no contêiner.
+Isso pode ser confuso, mas align-contentdetermina o espaçamento entre as linhas, enquanto align-itemsdetermina como os itens como um todo são alinhados dentro do contêiner. Quando há apenas uma linha, align-contentnão tem efeito. */
+
+#pond {
+  display: flex;
+  flex-wrap: wrap;
+align-content: flex-start;
+}

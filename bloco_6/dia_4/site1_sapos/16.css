@@ -1,0 +1,11 @@
+/* FLEXBOX FROGGY
+Outra propriedade que você pode aplicar a itens individuais é align-self. Esta propriedade aceita os mesmos valores align-itemse seu valor para o item específico. */
+
+#pond {
+  display: flex;
+  alinhar-itens: flex-start;
+}
+
+.amarelo {
+align-self: flex-end;
+}
