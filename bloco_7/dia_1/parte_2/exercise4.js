@@ -6,7 +6,6 @@ const trocaXPor = (nome) => {
   listaFrase = stringDeterminada.split(" ");
   for (let palavraIndex = 0; palavraIndex < listaFrase.length; palavraIndex += 1){
     if (listaFrase[palavraIndex] === "x") {
-      // let paramentro = nome
       listaFrase[palavraIndex] = nome;
     }
   }
