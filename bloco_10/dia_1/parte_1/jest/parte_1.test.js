@@ -55,7 +55,7 @@ describe('exercise_4_myFizzBuzz', () =>{
     })
 })
 
-const { obj1, obj2, obj3 } = require('./exercise_5_object');
+const { obj1, obj2, obj3 } = require('../exercise_5_object');
 describe('exercise_5_object', () =>{
     test('Comparing objects', () => {
         expect(obj1).toEqual(obj2);
