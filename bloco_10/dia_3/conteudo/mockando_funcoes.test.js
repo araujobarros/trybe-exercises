@@ -23,6 +23,7 @@ test('mock randomNumber', () => {
     .mockReturnValueOnce(8);
 
     expect(randomNumber).toHaveBeenCalledTimes(0);
+    
 
     expect(isDivisible(2)).toBeFalsy();
     expect(randomNumber).toHaveBeenCalledTimes(1);
